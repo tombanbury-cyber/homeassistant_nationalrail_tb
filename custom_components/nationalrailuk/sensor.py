@@ -12,7 +12,7 @@ from homeassistant.helpers.update_coordinator import (
     CoordinatorEntity,
     DataUpdateCoordinator,
 )
-
+from homeassistant.components.sensor import SensorDeviceClass
 from .client import NationalRailClient
 from .const import (
     CONF_DESTINATIONS,
@@ -163,7 +163,8 @@ class NationalRailSchedule(CoordinatorEntity):
 
     """
 
-    attribution = "This uses National Rail Darwin Data Feeds"
+    _attr_attribution = "Data from National Rail Darwin Feeds"
+    _attr_device_class = SensorDeviceClass.TIMESTAMP
 
     def __init__(self, coordinator):
         """Pass coordinator to CoordinatorEntity."""
