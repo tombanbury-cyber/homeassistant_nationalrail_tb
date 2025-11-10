@@ -8,11 +8,12 @@ import time
 
 import async_timeout
 
+from homeassistant.components.sensor import SensorDeviceClass
 from homeassistant.helpers.update_coordinator import (
     CoordinatorEntity,
     DataUpdateCoordinator,
 )
-from homeassistant.components.sensor import SensorDeviceClass
+
 from .client import NationalRailClient
 from .const import (
     CONF_DESTINATIONS,
@@ -95,7 +96,7 @@ class NationalRailScheduleCoordinator(DataUpdateCoordinator):
             #    raise UpdateFailed(f"Error communicating with API: {err}") from err
 
             if self.sensor_name is None:
-                self.sensor_name = f"train_schedule_{self.station}{'_' + '_'.join(self.destinations) if len(self.destinations) >0 else ''}"
+                self.sensor_name = f"train_schedule_{self.station}{'_' + '_'.join(self.destinations) if len(self.destinations) > 0 else ''}"
 
             if self.description is None:
                 self.description = (
