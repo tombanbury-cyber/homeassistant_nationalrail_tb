@@ -1,6 +1,6 @@
 """Constants for the National Rail UK integration."""
 
-DOMAIN = "nationalrailuk"
+DOMAIN = "nationalrailuktb"
 DOMAIN_DATA = f"{DOMAIN}_data"
 
 # Platforms
