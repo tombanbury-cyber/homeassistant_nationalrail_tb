@@ -1,6 +1,6 @@
 {
-    "domain": "nationalrailuk",
-    "name": "National Rail UK",
+    "domain": "nationalrailuktb",
+    "name": "National Rail UK TB",
     "config_flow": true,
     "documentation": "https://github.com/jfparis/homeassistant_nationalrail",
     "issue_tracker": "https://github.com/jfparis/homeassistant_nationalrail/issues",
@@ -10,6 +10,6 @@
     "homekit": {},
     "dependencies": [],
     "version": "0.4.0",
-    "codeowners": ["@jfparis"],
+    "codeowners": ["@tombanbury-cyber"],
     "iot_class": "cloud_polling"
 }
