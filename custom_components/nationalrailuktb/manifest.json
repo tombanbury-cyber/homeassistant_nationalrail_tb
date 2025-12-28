@@ -9,7 +9,7 @@
     "zeroconf": [],
     "homekit": {},
     "dependencies": [],
-    "version": "0.4.2",
+    "version": "0.4.3",
     "codeowners": ["@tombanbury-cyber"],
     "iot_class": "cloud_polling"
 }
