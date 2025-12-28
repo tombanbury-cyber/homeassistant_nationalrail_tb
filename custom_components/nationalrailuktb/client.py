@@ -197,17 +197,17 @@ class NationalRailClient:
                     }
                 )
 
-            train["scheduled"] = time
-            train["expected"] = expected
-            train["terminus"] = terminus
-            train["destinations"] = arrival_dest
-            train["platform"] = service["platform"]
-            train["length"] = service. get("length")  # ← Fixed here
-            train["operator"] = service. get("operator") or service.get("operatorName")
-            train["service_type"] = service.get("serviceType")
-            train["perturbation"] = perturbation
-
-            status["trains"].append(train)
+        train["scheduled"] = time
+        train["expected"] = expected
+        train["terminus"] = terminus
+        train["destinations"] = arrival_dest
+        train["platform"] = service["platform"]
+        train["length"] = getattr(service, "length", None)
+        train["operator"] = getattr(service, "operator", None) or getattr(service, "operatorName", None)
+        train["service_type"] = getattr(service, "serviceType", None)
+        train["perturbation"] = perturbation
+        
+        status["trains"].append(train)
 
         status["trains"] = sorted(
             status["trains"],
