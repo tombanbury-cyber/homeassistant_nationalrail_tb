@@ -1,9 +1,9 @@
 {
     "domain": "nationalrailuktb",
-    "name": "National Rail UK TB",
+    "name": "National Rail UK Train Schedules (TB)",
     "config_flow": true,
-    "documentation": "https://github.com/jfparis/homeassistant_nationalrail",
-    "issue_tracker": "https://github.com/jfparis/homeassistant_nationalrail/issues",
+    "documentation": "https://github.com/tombanbury-cyber/homeassistant_nationalrail_tb",
+    "issue_tracker": "https://github.com/tombanbury-cyber/homeassistant_nationalrail_tb/issues",
     "requirements": ["zeep[async]==4.3.2"],
     "ssdp": [],
     "zeroconf": [],
